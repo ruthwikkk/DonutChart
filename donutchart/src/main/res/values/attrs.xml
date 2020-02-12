@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="DonutChart">
+        <attr name="donutWidth" format="dimension" />
+        <attr name="donutSmallWidth" format="dimension" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="correctPercentage" format="integer" />
+        <attr name="wrongPercentage" format="integer" />
+        <attr name="unAnsweredPercentage" format="integer" />
+        <attr name="separatorAngle" format="float" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+</resources>

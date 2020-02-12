@@ -1,0 +1,2 @@
+include ':app', ':donutchart'
+rootProject.name='Donut Chart'
