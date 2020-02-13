@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="brand_green">#39D1B4</color>
+    <color name="brand_green_alpha_15">#2639D1B4</color>
+    <color name="persian_green">#00AD8B</color>
+    <color name="brand_red">#F65A5B</color>
+    <color name="brand_red_alpha_15">#26F65A5B</color>
+    <color name="persian_red">#CC4B4B</color>
+    <color name="bg_like">#757575</color>
+    <color name="bg_like_alpha_15">#26757575</color>
+    <color name="white_transparent">#4DFFFFFF</color>
+
 </resources>
