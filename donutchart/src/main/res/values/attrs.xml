@@ -10,4 +10,12 @@
         <attr name="animationDuration" format="integer" />
     </declare-styleable>
 
+    <declare-styleable name="DonutProgressView">
+        <attr name="progressArcWidth" format="dimension" />
+        <attr name="defaultArcColour" format="color" />
+        <attr name="progressArcColour" format="color" />
+        <attr name="progressTextColour" format="color" />
+        <attr name="progressTextPadding" format="dimension" />
+    </declare-styleable>
+
 </resources>

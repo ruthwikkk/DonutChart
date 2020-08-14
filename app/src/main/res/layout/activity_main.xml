@@ -25,6 +25,19 @@
         app:wrongPercentage="20">
     </com.ruthwikkk.widget.donutchart.DonutChart>
 
+    <!--<com.ruthwikkk.widget.donutchart.DonutProgressView
+        android:id="@+id/progress"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:defaultArcColour="@color/bg_like"
+        app:progressArcColour="@color/brand_red"
+        app:progressTextColour="@color/brand_red">
+    </com.ruthwikkk.widget.donutchart.DonutProgressView>-->
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
