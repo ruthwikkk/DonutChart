@@ -1,7 +1,12 @@
 package com.ruthwikkk.chartview
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), LiveQuizTimer.LiveQuizTimerListener {
@@ -12,18 +17,26 @@ class MainActivity : AppCompatActivity(), LiveQuizTimer.LiveQuizTimerListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*donut_chart.startAnimation()
+        loadFragment(DonutChartFragment(),
+            R.id.home_container, home_container)
 
-        donut_chart.setOnClickListener {
-            donut_chart.startAnimation()
-        }*/
-        timer.addListener(this)
+        bottom_navigation.setOnNavigationItemSelectedListener(object : NavigationView.OnNavigationItemSelectedListener,
+            BottomNavigationView.OnNavigationItemSelectedListener {
+            override fun onNavigationItemSelected(menu: MenuItem): Boolean {
+                when(menu.itemId){
+                    R.id.action_donut -> {
+                        loadFragment(DonutChartFragment(),
+                            R.id.home_container, home_container)
+                    }
+                    R.id.action_progress -> {
+                        loadFragment(ProgressChartFragment(),
+                            R.id.home_container, home_container)
+                    }
+                }
 
-        progress.setOnClickListener {
-            timer.start()
-        }
-
-        progress.setProgress(30)
+                return true
+            }
+        })
     }
 
     override fun LiveQuizTimerCompleted() {
@@ -31,12 +44,25 @@ class MainActivity : AppCompatActivity(), LiveQuizTimer.LiveQuizTimerListener {
     }
 
     override fun LiveQuizTimerTick(timeRemaining: Long) {
-        progress.setProgress(getPercentage(10,timeRemaining.toInt()))
+
     }
 
     fun getPercentage(total: Int, value: Int): Int {
         return if (total > 0 && value > 0) {
             value * 100 / total
         } else 0
+    }
+
+    fun loadFragment(fragment: Fragment, containerViewId : Int, containerView : ViewGroup) {
+        try {
+            containerView.removeAllViews()
+            var transaction: androidx.fragment.app.FragmentTransaction = supportFragmentManager.beginTransaction()
+            transaction.setTransition(androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+            transaction = transaction.replace(containerViewId, fragment)
+            transaction.commit()
+        } catch (e: Exception) {
+
+        }
+
     }
 }
