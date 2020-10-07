@@ -2,7 +2,8 @@
 
 DonutChart is a customised pie chart library.
 
-![preview](https://github.com/ruthwikkk/DonutChart/blob/master/screenshot_1.png)
+![preview](https://github.com/ruthwikkk/DonutChart/blob/master/donut.gif)
+![preview](https://github.com/ruthwikkk/DonutChart/blob/master/progress.gif)
 
 ## Add to project ##
 1. Add it in your root build.gradle at the end of repositories:
@@ -31,7 +32,6 @@ implementation 'com.github.ruthwikkk:donutchart:{latest_version}'
         android:id="@+id/donut_chart"
         android:layout_width="300dp"
         android:layout_height="300dp"
-
         app:animationDuration="3000"
         app:correctPercentage="70"
         app:donutSmallWidth="10dp"
