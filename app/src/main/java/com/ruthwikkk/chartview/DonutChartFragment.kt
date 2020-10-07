@@ -1,6 +1,7 @@
 package com.ruthwikkk.chartview
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,10 @@ class DonutChartFragment: Fragment() {
     override fun onStart() {
         super.onStart()
         initViews()
+        Handler().postDelayed({
+            donut_chart.animate().alpha(1f).setDuration(300).start()
+            donut_chart.startAnimation()
+        }, 1000)
     }
 
     private fun initViews(){

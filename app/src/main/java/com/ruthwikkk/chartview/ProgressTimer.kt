@@ -2,7 +2,7 @@ package com.ruthwikkk.chartview
 
 import android.os.Handler
 
-class LiveQuizTimer: Runnable {
+class ProgressTimer: Runnable {
 
     interface LiveQuizTimerListener{
         fun LiveQuizTimerCompleted()
@@ -16,7 +16,7 @@ class LiveQuizTimer: Runnable {
 
     val VIDEO_NEXT_ITEM_WAIT = 10L
 
-    fun addListener(callback: LiveQuizTimerListener): LiveQuizTimer{
+    fun addListener(callback: LiveQuizTimerListener): ProgressTimer{
         purge()
         this.listener = callback
         return this
