@@ -17,10 +17,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
             app:progressArcColour="@color/brand_red"
             app:progressTextColour="@color/brand_red">
 
         </com.ruthwikkk.widget.donutchart.DonutProgressView>
+
+        <Button
+            android:id="@+id/btn_progress_timer_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_green_background"
+            android:textColor="#FFF"
+            android:text="START"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress">
+
+        </Button>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

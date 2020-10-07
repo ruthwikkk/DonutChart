@@ -12,11 +12,11 @@
             android:id="@+id/donut_chart"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:alpha="0"
             app:animationDuration="3000"
             app:correctPercentage="70"
             app:donutSmallWidth="10dp"
             app:donutWidth="75dp"
-
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,20 +24,9 @@
             app:separatorAngle="1"
             app:textPadding="40dp"
             app:unAnsweredPercentage="10"
-            app:wrongPercentage="20"></com.ruthwikkk.widget.donutchart.DonutChart>
+            app:wrongPercentage="20">
 
-        <!--<com.ruthwikkk.widget.donutchart.DonutProgressView
-            android:id="@+id/progress"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:defaultArcColour="@color/bg_like"
-            app:progressArcColour="@color/brand_red"
-            app:progressTextColour="@color/brand_red">
-        </com.ruthwikkk.widget.donutchart.DonutProgressView>-->
+        </com.ruthwikkk.widget.donutchart.DonutChart>
 
         <LinearLayout
             android:id="@+id/linearLayout"

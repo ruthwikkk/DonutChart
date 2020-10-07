@@ -9,9 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), LiveQuizTimer.LiveQuizTimerListener {
-
-    var timer: LiveQuizTimer = LiveQuizTimer()
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,20 +35,6 @@ class MainActivity : AppCompatActivity(), LiveQuizTimer.LiveQuizTimerListener {
                 return true
             }
         })
-    }
-
-    override fun LiveQuizTimerCompleted() {
-
-    }
-
-    override fun LiveQuizTimerTick(timeRemaining: Long) {
-
-    }
-
-    fun getPercentage(total: Int, value: Int): Int {
-        return if (total > 0 && value > 0) {
-            value * 100 / total
-        } else 0
     }
 
     fun loadFragment(fragment: Fragment, containerViewId : Int, containerView : ViewGroup) {
